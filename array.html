@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta caharset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+
+    {
+        // array loop
+        const array = ["Iko", "Afianando", "Ganteng"];
+
+        array.forEach(function (value, index) { // paremeter pertama merupakan nilai pada foreach
+                                                // sedangkan parameter kedua merupakan index pada foreach
+            console.info(`${value} : ${index} `);
+        });
+
+        array.forEach((value, index) => console.info(`${index} : ${value}`));
+        array.forEach(value => console.info(value));
+
+    }
+
+</script>
+</body>
+</html>
