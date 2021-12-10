@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+
+    const person = {
+        firstName: "Iko",
+        lastName: "Afianando"
+    }
+
+    // Object.freeze(person); // tidak bisa menghapus, menambah, mengubah
+    Object.seal(person); // tidak bisa menghapus dan menambah
+
+    person.firstName = "Iko Ganteng";
+    person.fullName = "Iko Afianando";
+    delete person.lastName;
+    console.log(person);
+
+</script>
+</body>
+</html>

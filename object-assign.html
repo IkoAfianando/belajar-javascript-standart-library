@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object Assign</title>
+</head>
+<body>
+<script>
+
+    // object assign merupakan memindahkan atribut dari
+    const target = {firstName: "Iko"};
+    const source = {lastName: "Afianando"};
+
+    Object.assign(target,source); // memindahkan attribute atau seluruh property source ke dalam target ditimpa
+    Object.assign(source, target);
+    console.log(target);
+    console.log(source);
+
+</script>
+</body>
+</html>
