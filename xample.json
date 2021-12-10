@@ -1,0 +1,14 @@
+{
+  "firstName": "Iko",
+  "lastName": "Afianando",
+  "fullName": "Iko Afianando",
+  "address": {
+    "city": "Banyuwangi",
+    "country": "Indonesia"
+  },
+  "hobbies": [
+    "Coding",
+    "Game",
+    "Travelling"
+  ]
+}
