@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Transform</title>
+</head>
+<body>
+<script>
+
+    // transform merupakan mengubah nilai valuenya menjadi nilai yang baru sesuai perintah dan dimasukkan kedalam array yang berbeda
+    const names = ["Iko", "Afianando", "Ganteng"];
+    const nameUpper = names.map(value => value.toUpperCase());
+    console.log(nameUpper);
+
+    const namesReduce = names.reduce((before, value) => `${before} ${value}`);
+    const namesRight = names.reduceRight((before, value) => `${before} ${value}`);
+    console.log(namesReduce);
+    console.log(namesRight);
+
+    const numbers = [1,2,3,4,5,6,7,8,9,10];
+    const total = numbers.reduce((before,value) => before + value);
+    console.log(total);
+
+</script>
+
+</body>
+</html>
