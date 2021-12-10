@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+<script>
+
+    const person = {
+        firstName: "Iko",
+        lastName: "Afianando",
+        fullName: "Iko Afianando",
+        address: {
+            city: "Banyuwangi",
+            country: "Indonesia"
+        },
+        hobbies: ["Coding", "Game", "Travelling"],
+    };
+
+    const json = JSON.stringify(person);
+    console.log(json);
+
+
+</script>
+</body>
+</html>
