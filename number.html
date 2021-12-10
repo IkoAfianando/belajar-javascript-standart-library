@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Number</title>
+</head>
+<body>
+<script>
+
+    const input = "123456";
+    const number = Number(input);
+    console.log(typeof input);
+    console.log(typeof number);
+    console.log(number);
+    console.log(Number("Salah"));
+
+    console.info(Number.MIN_VALUE);
+    console.info(Number.MAX_VALUE);
+    console.info(Number.MIN_SAFE_INTEGER);
+    console.info(Number.MAX_SAFE_INTEGER);
+    console.info(Number.NaN);
+
+    const data = Number("Iko");
+    console.info(Number.isInteger(data)); // false dikarenakan merupakan integer number
+    console.info(Number.isNaN(data)); // true dikarenakan NaN (Not a Number)
+
+    const value = Number("12345");
+    console.log(value.toString(2)); // menjadi format binary contohnya
+    console.log(value.toLocaleString("id-ID")); // menjadi format local
+    console.log(value.toLocaleString("en-US")); // menjadi format local
+
+
+</script>
+</body>
+</html>
