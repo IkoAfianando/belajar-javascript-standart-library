@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array Search</title>
+</head>
+<body>
+<script>
+    {
+        //array search
+
+        const source = [1,2,3,4,5,1,2,3,4,5];
+
+        console.log(source.find(value => value > 3)); // mencari value nilai lebih dari yaitu 4
+        console.log(source.findIndex(value => value > 3)); // mencari index yang nilainya lebih dari 3 yaitu index ke 3[4]
+        console.log(source.includes(8)); // hasilnya false dikarenakan value 8 tidak dapat ditemukan pada array
+        console.log(source.indexOf(5)); // yang dicari merupakan index yang pertama
+        console.log(source.lastIndexOf(5)); // yang dicari merupakan index yang terakhir
+
+    }
+
+</script>
+</body>
+</html>
