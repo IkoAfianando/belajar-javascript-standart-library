@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base64</title>
+</head>
+<body>
+<script>
+
+    const original = "Iko&Afianando=Ganteng";
+    console.log(original);
+    const encoded = btoa(original);
+    console.log(encoded);
+
+    const decoded = atob(encoded);
+    console.log(decoded);
+</script>
+</body>
+</html>
