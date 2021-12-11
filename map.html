@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map</title>
+</head>
+<body>
+<script>
+
+    const map = new Map();
+    map.set("firstName", "Iko");
+    map.set("lastName", "Afianando");
+
+    console.log(map);
+    console.log(map.get("firstName"));
+    console.log(map.get("lastName"));
+    console.log(map.get("hobbies"));
+
+    for (const mapElement of map) {
+        console.log(`${mapElement[0]} : ${mapElement[1]}`);
+    }
+
+    map.forEach((value, key) => console.log(`${key} : ${value}`));
+
+</script>
+</body>
+</html>
