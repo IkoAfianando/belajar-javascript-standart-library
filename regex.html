@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>regEx</title>
+</head>
+<body>
+<script>
+
+    {
+        // create Regular Expression
+        const regex1 = /iko/;
+        const regex2 = new RegExp("iko");
+        const regex3 = new RegExp(/iko/);
+    }
+
+    {
+        // test regex
+
+        const name = "iko afianando iko kun";
+        const regex = /afianando/;
+
+        const result = regex.exec(name);
+        console.log(result);
+        console.log(regex.exec("tidak ada"));
+
+        const test = regex.test(name);
+        console.log(test);
+        console.log(regex.test("tidak ada"));
+
+    }
+
+    {
+        // regex modifier
+        // fungsi multiline apabila terdapat awalan baru akan dianggap (^)
+        const name = "iko afianando\nIko nando\nEdi Afianando";
+        const regex1 = /^iko/ig;
+        const regex2 = /Afianando/ig;
+
+        let result;
+        while ((result = regex1.exec(name)) !== null) {
+            console.log(result);
+        }
+
+        while ((result = regex2.exec(name)) !== null) {
+            console.log(result);
+        }
+
+    }
+
+    {
+        // advanced regex
+
+        const regex = /ek[aiueo]/ig;
+        const name = "eko eki eko eku edo eko eki";
+
+        let result;
+        while ((result = regex.exec(name)) !== null) {
+            console.log(result);
+        }
+    }
+
+    {
+        const string = "eko ado eki eka ejo emi elo eke eka eku";
+
+        console.log(string.match(/ek[aiueo]/ig)); // ["eko" "eki" "eka" "eke"]
+        console.log(string.search(/ek[aiueo]/ig)); // 0
+        // direplace semua karena regex
+        console.log(string.replace(/ek[aiueo]/i, "keren")); //apabila tidak ditambah (g) hanya satu yang di refresh
+        console.log(string.replaceAll(/ek[aiueo]/ig, "keren"));
+        console.log(string.split(/e/ig));
+    }
+</script>
+</body>
+</html>
