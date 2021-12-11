@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encode</title>
+</head>
+<body>
+<script>
+
+    {
+        // encode url dan decode url
+
+        const url = "http://contoh.com/?name=Iko Afianando";
+        console.log(url);
+
+        const encoded = encodeURI(url);
+        console.log(encoded);
+
+        const decoded = decodeURI(encoded);
+        console.log(decoded);
+    }
+
+    {
+        // encode url dan decode url
+        const value = "Iko&Afianando=Ganteng";
+        const url = "http://contoh.com/?name=";
+        console.log(url + value);
+
+        const encoded = encodeURI(value);
+        console.log(url + encoded);
+
+        const decoded = decodeURI(encoded);
+        console.log(url + decoded);
+    }
+
+</script>
+</body>
+</html>

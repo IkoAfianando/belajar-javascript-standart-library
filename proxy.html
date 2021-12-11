@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proxy</title>
+</head>
+<body>
+<script>
+
+    const target = {
+        fullName: "Iko Afianando",
+    };
+
+    const handler = {
+        get: function (target, property) {
+            console.log(`Access property : ${property}`);
+            return target[property];
+        },
+        set: function(target, property, value) {
+            console.log(`Change Property ${property} : ${value}`);
+            if(value === null) {
+                // throw new Error("Tidak boleh kosong blok");
+                target[property] = "";
+            }else {
+                target[property] = value;
+            }
+        }
+    };
+
+    const proxy = new Proxy(target, handler);
+    proxy.firstName = "Iko";
+    proxy.lastName = null;
+    proxy.fullName; // delegasi property fullname yang kosong akan menyebabkan fullName[property] kosong dan hanya diisi propertynya saja;
+
+    console.log(proxy.firstName); // pada saat ini dijalankan maka method get yang akan dieksekusi
+    console.log(proxy.lastName);
+    console.log(proxy.fullName);
+    console.log(target);
+
+</script>
+</body>
+</html>
